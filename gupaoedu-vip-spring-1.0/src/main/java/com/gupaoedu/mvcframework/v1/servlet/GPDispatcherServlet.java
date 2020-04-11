@@ -31,6 +31,7 @@ public class GPDispatcherServlet extends HttpServlet {
         try {
             doDispatch(req, resp);
         } catch (Exception e) {
+            e.printStackTrace();
             resp.getWriter().write("500 Exception " + Arrays.toString(e.getStackTrace()));
         }
     }
@@ -59,7 +60,14 @@ public class GPDispatcherServlet extends HttpServlet {
             String scanPackage = configContext.getProperty("scanPackage");
             // 遍历配置文件中包下的所有类，并将全路径为键值为null保存到mapping
             doScanner(scanPackage);
+            List<String> keys = new ArrayList<String>();
             for (String className : mapping.keySet()) {
+                keys.add(className);
+            }
+
+            System.out.println(keys);
+            for (String className : keys) {
+                System.out.println(className);
                 if (!className.contains(".")) {
                     continue;
                 }
@@ -98,8 +106,12 @@ public class GPDispatcherServlet extends HttpServlet {
                     continue;
                 }
             }
+            List<Object> values = new ArrayList<>();
             // map.values获取Map中所有值
             for (Object object : mapping.values()) {
+                values.add(object);
+            }
+            for (Object object : values) {
                 if (object == null) {
                     continue;
                 }
