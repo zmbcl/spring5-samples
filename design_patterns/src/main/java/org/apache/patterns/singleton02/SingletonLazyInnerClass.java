@@ -9,6 +9,10 @@ public class SingletonLazyInnerClass {
     // 默认会先初始化内部类
     // 如果没有使用，则内部类是不加载的
     private SingletonLazyInnerClass() {
+        // 防暴力反射的优化
+        if (LazyHolder.INNER_CLASS !=null){
+            throw new RuntimeException("不允许创建多个实例！");
+        }
     }
 
     // 每一个关键字都不是多余的，static是为了使单例的空间共享，保证这个方法不会被重写、重载
