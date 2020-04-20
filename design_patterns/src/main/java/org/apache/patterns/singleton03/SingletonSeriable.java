@@ -20,4 +20,11 @@ public class SingletonSeriable implements Serializable {
     public static SingletonSeriable getInstance(){
         return SINGLETON_SERIABLE;
     }
+    // 保证在序列化的情况下也能够实现单例模式
+    // 重写readResolve方法虽然保证了返回对象的唯一性，
+    // 但是通过查看ObjectInputStream的readObject()源码，实际上实例化了两次，只不过新创建的对象没有被返回而已
+    // 如果创建对象的动作频率加快，内存分配开销也会随之增大，注册式单例能解决吗？
+    private Object readResolve() {
+        return SINGLETON_SERIABLE;
+    }
 }
