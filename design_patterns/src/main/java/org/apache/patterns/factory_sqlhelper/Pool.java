@@ -1,7 +1,5 @@
 package org.apache.patterns.factory_sqlhelper;
 
-import com.sun.deploy.util.Property;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;

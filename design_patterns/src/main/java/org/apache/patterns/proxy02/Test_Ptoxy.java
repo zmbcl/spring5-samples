@@ -1,8 +1,5 @@
 package org.apache.patterns.proxy02;
 
-import com.sun.tools.corba.se.idl.constExpr.Or;
-
-import javax.xml.crypto.Data;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

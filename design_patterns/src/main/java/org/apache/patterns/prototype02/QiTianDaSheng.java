@@ -1,7 +1,5 @@
 package org.apache.patterns.prototype02;
 
-import com.sun.xml.internal.ws.server.sei.TieHandler;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

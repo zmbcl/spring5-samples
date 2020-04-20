@@ -1,7 +1,5 @@
 package org.apache.patterns.singleton04;
 
-import com.sun.tools.javac.code.Attribute;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
