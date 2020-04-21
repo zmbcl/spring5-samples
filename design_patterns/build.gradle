@@ -1,0 +1,20 @@
+import com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile
+
+plugins {
+    id 'java'
+}
+
+group 'org.apache'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    'cglib:cglib-nodep:2.2'
+}
