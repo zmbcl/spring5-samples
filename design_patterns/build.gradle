@@ -16,5 +16,5 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    'cglib:cglib-nodep:2.2'
+    compile('cglib:cglib-nodep:2.2')
 }

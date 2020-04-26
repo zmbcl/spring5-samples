@@ -106,7 +106,7 @@ public class GPDispatcherServlet extends HttpServlet {
                     continue;
                 }
             }
-            List<Object> values = new ArrayList<>();
+            List<Object> values = new ArrayList<Object>();
             // map.values获取Map中所有值
             for (Object object : mapping.values()) {
                 values.add(object);
