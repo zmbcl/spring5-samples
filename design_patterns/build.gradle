@@ -17,4 +17,7 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile('cglib:cglib-nodep:2.2')
+    compile 'mysql:mysql-connector-java:8.0.11'
+    compile 'com.alibaba:druid:1.1.21'
+
 }
